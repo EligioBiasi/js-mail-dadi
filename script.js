@@ -27,6 +27,18 @@ document.getElementById('button').addEventListener('click',function(){
     document.getElementById('button-email').addEventListener('click',function(){
         const userEmail = document.getElementById('mail-content').value;
         console.log(userEmail)
+
+        // controlla che sia nella lista di chi può accedere
+        // stampa un messaggio appropriato sull’esito del controllo.
+        if(userEmail.value == mailList[0]){
+            document.getElementById('output-email').innerHTML = 'Complimenti la tua mail è gabibbo@email.com'
+        } else if(userEmail.value == mailList[1]){
+            document.getElementById('output-email').innerHTML = 'Complimenti la tua mail è riccardofalegname@email.com'
+        } else if(userEmail.value == mailList[2]){
+            document.getElementById('output-email').innerHTML = 'Complimenti la tua mail è miamail.email.com'
+        } else {
+            document.getElementById('output-email').innerHTML = 'La tua mail non è presente'
+        }
     }
     )
-//  controlla che sia nella lista di chi può accedere, stampa un messaggio appropriato sull’esito del controllo.
+
