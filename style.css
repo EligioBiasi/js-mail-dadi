@@ -11,16 +11,23 @@ main{
 
 section{
     text-align: center;
+    margin: 1.5rem 0;
 }
 
 h1{
-    margin-bottom: 2rem;
+    margin: 2rem 0;
 }
 
 button{
     padding: 1rem;
+    margin: 1rem;
 }
 
 p{
     margin: 1rem 0;
+}
+
+input{
+    width: 35%;
+    height: 30px;
 }
