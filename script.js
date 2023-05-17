@@ -37,7 +37,7 @@ document.getElementById('button').addEventListener('click',function(){
         } else if(userEmail == mailList[2]){
             document.getElementById('output-email').innerHTML = 'Complimenti la tua mail è miamail.email.com'
         } else {
-            document.getElementById('output-email').innerHTML = 'riprova'
+            document.getElementById('output-email').innerHTML = 'la tua mail non è presente'
         }
     }
     )
