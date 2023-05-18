@@ -23,22 +23,24 @@ document.getElementById('button').addEventListener('click',function(){
 )
 
 // Chiedi all’utente la sua email,
+
    const mailList = ["gabibbo@email.com", "riccardofalegname@email.com", "miamail.email.com"];
+
     document.getElementById('button-email').addEventListener('click',function(){
         const userEmail = document.getElementById('mail-content').value;
-        console.log(userEmail);
-
+        let crtl = false
         // controlla che sia nella lista di chi può accedere
-        // stampa un messaggio appropriato sull’esito del controllo.
-        if(userEmail == mailList[0]){
-            document.getElementById('output-email').innerHTML = 'Complimenti la tua mail è gabibbo@email.com'
-        } else if(userEmail == mailList[1]){
-            document.getElementById('output-email').innerHTML = 'Complimenti la tua mail è riccardofalegname@email.com'
-        } else if(userEmail == mailList[2]){
-            document.getElementById('output-email').innerHTML = 'Complimenti la tua mail è miamail.email.com'
-        } else {
-            document.getElementById('output-email').innerHTML = 'la tua mail non è presente'
+        for(i=0;i<mailList.length;i++){
+            if(userEmail===mailList[i]){
+               crtl = true  
+        }
+        if(crtl){
+            document.getElementById('output-email').innerHTML = 'la tua mail è corretta'
+        }else{
+            document.getElementById('output-email').innerHTML = 'la tua mail non è corretta'
         }
     }
-    )
+}
+)
+ 
 
